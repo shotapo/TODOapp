@@ -1,4 +1,4 @@
-package jp.jp.co.todo.model;
+package model;
 
 public class User {
 
@@ -14,19 +14,19 @@ public class User {
     //→セッターは情報を変更するためのものだよ
 
     //フィールド（メンバ変数）
-    private String userID;
+    private int userID;
     private String name;
     private String email;
 
     //コンストラクタ（初期化）
-    public User(String userID, String name, String email){ 
-        this.userID = userID;
-        this.name = name;
-        this.email = email;
+    public User(int userID, String name, String email) {
+    this.userID = userID;
+    this.name = name;
+    this.email = email;
     }
 
     //ゲッター（外部から値を取得）
-    public String getuserID() {
+    public int getuserID() {
         return userID;
     }
     public String UserId() {
@@ -37,7 +37,7 @@ public class User {
     }
     
     //セッター（外部から値を変更）
-    public void setUserID(String userID) {
+    public void setUserID(int userID) {
         this.userID = userID;
     }
 

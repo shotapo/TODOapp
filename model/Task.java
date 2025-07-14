@@ -1,13 +1,14 @@
-package jp.jp.co.todo.model;
+package model;
 
 //日付を扱うクラスをインポート
 import java.time.LocalDate;
+import model.TaskStatus;
 
 
 /**
  * タスク情報を保持するクラス
  */
-public class task {
+public class Task {
     
     private int id;                     // タスクID
     private String title;              // タスクのタイトル
@@ -18,11 +19,10 @@ public class task {
      * コンストラクタ：タスクの初期状態を設定
      */
     
-    public task(int id, String title, String description, LocalDate dueDate, TaskStatus status, User assignedTo) {
+    public Task(int id, String title, String description, LocalDate dueDate, TaskStatus status, User assignedTo) {
         this.id = id;
         this.title = title;
         this.description = description;
-        this.dueDate = dueDate;
         this.status = status;
     }
 
