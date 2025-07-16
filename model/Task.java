@@ -2,7 +2,6 @@ package model;
 
 //日付を扱うクラスをインポート
 import java.time.LocalDate;
-import model.TaskStatus;
 
 
 /**
