@@ -3,9 +3,10 @@ package ui;
 import model.User;
 import model.Task;
 import model.TaskStatus;
-import manager.TaskManager;
 import service.NotificationService;
 import java.time.LocalDate;
+
+import controller.TaskService;
 
 
 /**
@@ -24,7 +25,7 @@ public class Main {
         Task task = new Task(101, "資料作成", "会議用資料を作成する", LocalDate.now().plusDays(2), TaskStatus.NOT_STARTED, user);
 
         // タスク管理
-        TaskManager manager = new TaskManager();
+        TaskService manager = new TaskService();
         manager.addTask(task);
 
         // 通知サービス
