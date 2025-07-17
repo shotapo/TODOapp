@@ -9,7 +9,7 @@ import model.Task;
 public class NotificationService {
 
 /**
-* タスクの締め切りが地数いていることを通知する（仮の処理）
+* タスクの締め切りが近づいていることを通知する（仮の処理）
 */ 
 
 public void sendReminder(Task task) {
