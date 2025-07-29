@@ -1,12 +1,11 @@
 package ui;
 
-import model.User;
-import model.Task;
-import model.TaskStatus;
+import service.TaskService;
 import service.NotificationService;
 import java.time.LocalDate;
-
-import controller.TaskService;
+import dto.Task;
+import dto.TaskStatus;
+import dto.User;
 
 
 /**

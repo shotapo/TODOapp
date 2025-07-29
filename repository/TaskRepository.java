@@ -1,8 +1,7 @@
 package repository;
 
-
 import java.util.List;
-import model.Task;
+import dto.Task;
 /**
  * タスクの保存・読み込みを扱うクラス（仮実装）
  */
@@ -24,4 +23,12 @@ public class TaskRepository {
         System.out.println("タスクを読み込みました（仮）");
         return List.of(); // 空のリストを返す
     }
+
+    // toStringメソッドのオーバーライド
+    @Override
+    public String toString() {
+        return "TaskRepository []"; // クラス名を返す
+    }   
+
+    // 
 }
