@@ -1,34 +1,35 @@
 package repository;
 
-import java.util.List;
 import dto.Task;
-/**
- * タスクの保存・読み込みを扱うクラス（仮実装）
- */
-public class TaskRepository {
+import java.util.Optional;
+import java.util.List;
 
-    /**
-     * タスク一覧を保存する（仮の処理）
-     */
+public class TaskRepository {
+    
+
+    @Override
     public void saveTasks(List<Task> tasks) {
         // 実際はファイルやDBに保存する処理を書く
-        System.out.println("タスクを保存しました（仮）");
-    }
+        System.out.println("タスクを保存しました");
+    }   
 
-    /**
-     * タスク一覧を読み込む（仮の処理）
-     */
-    public List<Task> loadTasks() {
+    @Override
+    public List <Task> loadTasks() {
         // 実際はファイルやDBから読み込む処理を書く
-        System.out.println("タスクを読み込みました（仮）");
+        System.out.println("タスクを読み込みました");
         return List.of(); // 空のリストを返す
     }
 
-    // toStringメソッドのオーバーライド
     @Override
-    public String toString() {
-        return "TaskRepository []"; // クラス名を返す
-    }   
+    public void saveTask(Task task) {
+        // タスクを保存する処理を書く
+        System.out.println("タスク '" + task.getTitle() + "件を保存しました");
+    }
 
-    // 
+    @Override
+    public Task findTaskById(Long id) {
+        // タスクをIDで検索する処理を書く
+        System.out.println("IDで " + id + " を検索しました");
+        return null; // 仮の実装ではnullを返す
+    }
 }
